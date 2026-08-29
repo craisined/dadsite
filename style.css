@@ -57,14 +57,26 @@ body {
 h1 {
     font-size: 4.5em;
     font-family: "VT323";
-    grid-column: span 3; /* Makes this item take up all 3 columns */
+    grid-column: span 3;
+    /* Makes this item take up all 3 columns */
     white-space: nowrap;
 }
 
 .content-container {
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+}
+
+.file-content-container {
+    display: inline-grid;
+    grid-template-columns: 1fr 2em;
+    grid-template-rows: 2em 1fr;
+    width: calc(100vw - 128px);
+    height: calc(100vh - 128px);
+    background-color: var(--ctp-surface0);
+    border-color: var(--ctp-text);
+    border-style: solid;
 }
 
 .file {
@@ -73,4 +85,29 @@ h1 {
 
 .os-icon {
     font-size: 4em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.close-btn {
+    font-size: 2em;
+    float: right;
+    background-color: var(--ctp-overlay2);
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0;
+    padding: 4px;
+}
+
+.file-title {
+    height: 100%;
+    background-color: var(--ctp-overlay2);
+    display: flex;
+    align-items: center;
 }
