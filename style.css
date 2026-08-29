@@ -60,12 +60,25 @@ h1 {
     font-family: "VT323";
     grid-column: span 3;
     white-space: nowrap;
+    margin: 48px;
+    animation: typing-mask 3s steps(14, end) forwards;
+    width: 14ch;
+}
+
+@keyframes typing-mask {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0% 0 0);
+    }
 }
 
 .content-container {
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3rem;
 }
 
 .file-content-container {
@@ -89,9 +102,6 @@ h1 {
     display: inline-block;
 }
 
-.file:hover {
-    color: var(--ctp-subtext0);
-}
 
 .os-icon {
     font-size: 6rem;
@@ -100,6 +110,10 @@ h1 {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+a:hover {
+    color: var(--ctp-subtext0);
 }
 
 p {
@@ -128,7 +142,7 @@ h3 {
     align-items: center;
 }
 
-.close-btn{
+.close-btn {
     font-size: 3rem;
 }
 
@@ -136,7 +150,13 @@ h3 {
     color: var(--ctp-surface0);
 }
 
-.ai {
-    font-size: calc(1.15 * 6rem);
-    vertical-align: calc(-0.125 * 6rem); 
+.icon-container > .ai {
+    font-size: calc(1.15 * 3rem);
+    vertical-align: calc(-0.125 * 3rem);
+}
+
+.icon-container {
+    grid-column: span 3;
+    text-align: center;
+    font-size: 3rem;
 }
