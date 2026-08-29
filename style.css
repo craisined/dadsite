@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 :root {
     --ctp-rosewater: #dc8a78;
@@ -41,13 +42,34 @@ body {
     color: var(--ctp-text);
     font-family: "Google Sans Code", monospace;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-variation-settings:
         "MONO" 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 h1 {
     font-size: 4em;
     font-family: "VT323";
+    grid-column: span 3; /* Makes this item take up all 3 columns */
+    white-space: nowrap;
+}
+
+.content-container {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+}
+
+.file {
+    text-align: center;
+}
+
+.os-icon {
+    font-size: 5em;
 }
