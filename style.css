@@ -117,7 +117,11 @@ a:hover {
 }
 
 p {
-    margin: 12px;
+    margin: 0.75rem;
+}
+
+ul {
+    margin: 0.75rem;
 }
 
 h2 {
